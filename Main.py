@@ -1,7 +1,7 @@
-from Tests.Training_U_net import training_u_net
-from Tests.Training_U_net_with_LSTM import training_u_net_lstm
-from Tests.Training_U_net_with_weights import training_unet_with_weights
-from Tests.Weighted_LSTM_Unet import weighted_lstm_unet
+from Tested_Models.Training_U_net import training_u_net
+from Tested_Models.Training_U_net_with_LSTM import training_u_net_lstm
+from Tested_Models.Training_U_net_with_weights import training_unet_with_weights
+from Tested_Models.Weighted_LSTM_Unet import weighted_lstm_unet
 
 def main(argv):
    
