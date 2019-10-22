@@ -40,11 +40,11 @@ def training_unet_with_weights():
         val_generator = generator_with_weights(x_val, y_val, weight_val, distro['batch_size'])
 
         #######Compile the u-net model with the previously stated parameters#######
-
+        print(distro['base'], distro['img_w'], distro['img_h'], img_ch, distro['batch_normalization'])
         model, input_weights = u_net(distro['base'], distro['img_w'], distro['img_h'], img_ch, distro['batch_normalization'], distro['SDRate'], distro['spatial_dropout'], distro['number_labels'],distro['activation_function'],lstm = False, weighted =True)
 
         #Compile the model with weighted cross-entropy loss and metric as jaccard_distance
-        model.compile(optimizer = Adadelta(lr=0.001), loss = weighted_bce_loss(input_weights, weight_strength), metrics =[jaccard_acc])
+        model.compile(optimizer = RMSprop(lr=distro['LR']), loss = weighted_bce_loss(input_weights, weight_strength), metrics =[jaccard_acc])
 
 
         #######Fit the data into the model#######
@@ -61,11 +61,11 @@ def training_unet_with_weights():
 
 
         # Save the weights
-        model.save_weights('Models/U_Net_with_Weights/U_Net_Weights_Adadelta_Base_{}.h5'.format(distro['base']))
+        model.save_weights('Models/U_Net_with_Weights/U_Net_Weights_best.h5')
         #Plots per fold
         fig_loss, fig_dice, min_loss_arg, min_jaccard_arg = plotter(History)
-        fig_loss.savefig('Plots/U_Net_with_Weights/Learning_Curve_U_Net_with_Weights_Adadelta_Base_{}.png'.format(distro['base']))
-        fig_dice.savefig('Plots/U_Net_with_Weights/Jaccard_Score_Curve_U_Net_with_Weights_Adadelta_Base_{}.png'.format(distro['base']))
+        fig_loss.savefig('Plots/U_Net_with_Weights/Learning_Curve_U_Net_with_Weights_best.png')
+        fig_dice.savefig('Plots/U_Net_with_Weights/Jaccard_Score_Curve_U_Net_with_Weights_best.png')
 
         min_loss.append(min_loss_arg)
         min_jaccard.append(min_jaccard_arg)

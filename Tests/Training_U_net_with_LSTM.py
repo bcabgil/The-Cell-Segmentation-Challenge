@@ -2,7 +2,7 @@ from Utils.Data_Loader import get_train_test_data
 from tensorflow.keras.optimizers import Adam
 from Utils.plotter import plotter
 from Utils.losses import  jaccard_acc
-from Utils.u_net_LSTM import u_net_lstm
+from Utils.u_net import u_net
 from Utils.Data_Augmentation import DataAugmentation
 import sys
 import numpy as np
@@ -27,7 +27,7 @@ def training_u_net_lstm():
     horizontal_flip = True
     
     #########Import the different configurations for the model#############
-    with open('Json-Files/intialize_unet_lstm.json', 'r') as f:
+    with open('Json-Files/intialize_unet.json', 'r') as f:
         distros_dict = json.load(f)
         
     for distro in distros_dict: 
@@ -40,7 +40,7 @@ def training_u_net_lstm():
         x_train, x_val, y_train, y_val, _ ,  _ = get_train_test_data(fold1, fold2, data_path, distro['img_h'], distro['img_w'])
 
         #########Initialize the model and compile it #############
-        model= u_net_lstm(distro['base'],distro['img_h'], distro['img_w'], img_ch, distro['batch_normalization'], distro['SDRate'], distro['spatial_dropout'], distro['number_of_labels'],distro['activation_function'], lstm = True, weighted =False)
+        model= u_net(distro['base'],distro['img_h'], distro['img_w'], img_ch, distro['batch_normalization'], distro['SDRate'], distro['spatial_dropout'], distro['number_of_labels'],distro['activation_function'], lstm = True, weighted =False)
         model.compile(optimizer = Adam(lr=distro['LR']), loss = distro['loss_function'], metrics =[jaccard_acc])
 
         ###############choosing between using weights for unbalanced data or uniform weights###############

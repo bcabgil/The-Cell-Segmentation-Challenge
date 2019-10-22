@@ -39,7 +39,8 @@ def training_u_net():
       
 
         #########Initialize the model and compile it #############
-        model= u_net(distro['base'],distro['img_h'], distro['img_w'], img_ch, distro['batch_normalization'], distro['SDRate'], distro['spatial_dropout'], distro['number_of_labels'],distro['activation_function'], lstm = False, weighted =False)
+        print(distro['batch_normalization'])
+        model= u_net(distro['base'],distro['img_h'], distro['img_w'], img_ch, distro['batch_normalization'] , distro['SDRate'], distro['spatial_dropout'], distro['number_of_labels'],distro['activation_function'], lstm = False, weighted =False)
         model.compile(optimizer = Adam(lr=distro['LR']), loss = distro['loss_function'], metrics =[jaccard_acc])
 
         ###############choosing between using weights for unbalanced data or uniform weights###############

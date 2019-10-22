@@ -10,8 +10,8 @@ from tensorflow.keras.models import Model
 from tensorflow.keras.layers import Activation
 from tensorflow.keras.layers import Conv2D, Input, concatenate, Conv2DTranspose
 from tensorflow.keras.layers import BatchNormalization, SpatialDropout2D
-from tensorflow.keras.layers import MaxPooling2D
-
+from tensorflow.keras.layers import MaxPooling2D, Reshape, ConvLSTM2D
+import numpy as np
 def u_net(Base,img_height, img_width, img_ch, batchNormalization, SDRate, spatial_dropout, number_of_labels,activation_function, lstm, weighted):
     
     inputs = Input((img_height, img_width, img_ch))
