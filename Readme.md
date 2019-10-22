@@ -1,9 +1,13 @@
 ## Models:
 
 -For all four models, we have json files that can be used to change all the parameters. The json files can be found in the folder "Json-Files".
+
 -In the folder "PhC-C2DH-U373", we saved the training and test data with the ground truth.
+
 -In the folder "Tests", we saved all the four models that we trained.
--In the folder "Plots", we have four folders, where the plots for each trained models can be found
+
+-In the folder "Plots", we have four folders, where the plots for each trained models can be found.
+
 -In the folder "Utils", the different functions we use in order to train the model can be found such as the data loader (to read the data), the plotter (to plot the loss curve), the model itself etc.
 
 -The python file "Main.py" can be executed in the terminal then one can choose which model should be trained:
