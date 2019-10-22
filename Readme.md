@@ -16,10 +16,15 @@
 ## How to execute the Main.py:
 
 -The python file "Main.py" can be executed in the terminal then one can choose which model should be trained:
+
     If number 1 is typed, then the model U-Net is used.
+    
     If number 2 is typed, then the model U-Net with LSTM is used.
+    
     If number 3 is typed, then the model U-Net with the weighted loss function is used.
+    
     If number 4 is typed, then the model U-Net with LSTM and the weighted loss function is used.
+    
 -If one wants to change the parameter configuration, then the Json-Files in the folder can change accordingly.
     
 ##The orginal configuration, we tested the four models with are:
