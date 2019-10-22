@@ -13,7 +13,7 @@
 
 -In the folder "Utils", the different functions we use in order to train the model can be found such as the data loader (to read the data), the plotter (to plot the loss curve), the model itself etc.
 
-##How to execute the Main.py:
+## How to execute the Main.py:
 
 -The python file "Main.py" can be executed in the terminal then one can choose which model should be trained:
     If number 1 is typed, then the model U-Net is used.
