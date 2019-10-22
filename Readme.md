@@ -1,4 +1,5 @@
-## Models:
+## Group 9001 Blanca Cabrera Gil & Laila Niazy
+## How the repo is organized:
 
 -For all four models, we have json files that can be used to change all the parameters. The json files can be found in the folder "Json-Files".
 
