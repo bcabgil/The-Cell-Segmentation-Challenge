@@ -1,8 +1,15 @@
 ## Group 9001 Blanca Cabrera Gil & Laila Niazy
 
 ## Results
+The best jaccard coefficient value obtained was 0.757. The used architecture was the U-Net network model using weighted loss function. And the parameter configuration the one shown in the following table:
 
-![Prediction](https://github.com/bcabgil/The-Cell-Segmentation-Challenge/tree/master/Gifs/predicted_last)	![Target](https://github.com/bcabgil/The-Cell-Segmentation-Challenge/tree/master/Gifs/gif_gt_mask_prediction)
+| Base | Batch Size | Size | Epochs | Balanced Weights | Data Augmentation | Batch Normalization | Optimizer |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| 64 | 2 | 128x128 | 5000 | True | True | False| RMSprop|
+
+The next images show the set of predicted segmentation (left) againts its ground-truth mask (right).
+
+![Prediction](https://github.com/bcabgil/The-Cell-Segmentation-Challenge/tree/master/Gifs/predicted_last.gif)	![Target](https://github.com/bcabgil/The-Cell-Segmentation-Challenge/tree/master/Gifs/gif_gt_mask_prediction.gif)
 
 ## How the repo is organized:
 
