@@ -1,4 +1,9 @@
 ## Group 9001 Blanca Cabrera Gil & Laila Niazy
+
+## Results
+
+![Input](https://github.com/bcabgil/The-Cell-Segmentation-Challenge/tree/master/Gifs/01_image_gif)	![Prediction](https://github.com/bcabgil/The-Cell-Segmentation-Challenge/tree/master/Gifs/gif_gt_mask_prediction)	![Target](https://github.com/bcabgil/The-Cell-Segmentation-Challenge/tree/master/Gifs/prediction-gif)
+
 ## How the repo is organized:
 
 -For all four models, we have json files that can be used to change all the parameters. The json files can be found in the folder "Json-Files".
