@@ -2,7 +2,7 @@
 
 ## Results
 
-![Input](https://github.com/bcabgil/The-Cell-Segmentation-Challenge/tree/master/Gifs/01_image_gif)	![Prediction](https://github.com/bcabgil/The-Cell-Segmentation-Challenge/tree/master/Gifs/gif_gt_mask_prediction)	![Target](https://github.com/bcabgil/The-Cell-Segmentation-Challenge/tree/master/Gifs/prediction-gif)
+![Prediction](https://github.com/bcabgil/The-Cell-Segmentation-Challenge/tree/master/Gifs/predicted_last)	![Target](https://github.com/bcabgil/The-Cell-Segmentation-Challenge/tree/master/Gifs/prediction-gif)
 
 ## How the repo is organized:
 
