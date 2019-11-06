@@ -7,9 +7,9 @@ The best jaccard coefficient value obtained was 0.757. The used architecture was
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
 | 64 | 2 | 128x128 | 5000 | True | True | False| RMSprop|
 
-The next images show the set of predicted segmentation (left) againts its ground-truth mask (right).
+The next images show the set of predicted segmentation (left) againts its ground-truth mask (right). In the predicted image the values are thresholded to as values greater than 0 are equal to 1.
 
-![Prediction](tree/master/Gifs/predicted_last.gif)	![Target](tree/master/Gifs/gif_gt_mask_prediction.gif)
+![](https://github.com/bcabgil/The-Cell-Segmentation-Challenge/blob/master/Gifs/predicted_last.gif)	![](https://github.com/bcabgil/The-Cell-Segmentation-Challenge/blob/master/Gifs/gif_gt_mask_prediction.gif)
 
 ## How the repo is organized:
 
